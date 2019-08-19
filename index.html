@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="basicApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS Basics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+
+    <script src="app/user-list/user-list.module.js"></script>
+    <script src="app/user-list/user-list.component.js"></script>
+
+    <script src="app/user-detail/user-detail.module.js"></script>
+    <script src="app/user-detail/user-detail.component.js"></script>
+
+</head>
+
+<body>
+
+    <div ng-view></div>
+
+</body>
+
+</html>

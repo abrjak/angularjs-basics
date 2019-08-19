@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-2">
+            <p> Search: <input ng-model="$ctrl.query" /></p>
+            <p>
+                Sort by: <select ng-model="$ctrl.orderProp">
+                    <option value="id">Numerical</option>
+                    <option value="gamertag">Alphabetical (GT)</option>
+                </select>
+            </p>
+        </div>
+        <div class="col-md-10">
+            <table class="user">
+                <tr>
+                    <th>ID</th>
+                    <th>Gamertag</th>
+                    <th>Full Name</th>
+                </tr>
+                <tr ng-repeat="u in $ctrl.user | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+                    <td><a href="#!/user/{{u.id}}">{{u.id}}</a></td>
+                    <td>{{u.gamertag}}</td>
+                    <td>{{u.fullname}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
